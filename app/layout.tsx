@@ -26,8 +26,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hussein Abdow | Portfolio",
-  description: "I build what people use — and design how it feels.",
+  title: {
+    default: "Yoverth Preciado | Software Engineer",
+    template: "%s | Yoverth Preciado",
+  },
+  description:
+    "Portafolio profesional de Yoverth Preciado. Desarrollo de aplicaciones móviles, arquitectura web moderna y diseño de bases de datos relacionales.",
+  authors: [{ name: "Yoverth Preciado", url: "https://github.com/yoverth" }],
+  creator: "Yoverth Preciado",
+  openGraph: {
+    title: "Yoverth Preciado | Software Engineer",
+    description:
+      "Desarrollo de software, aplicaciones móviles con React Native y bases de datos relacionales.",
+    siteName: "Yoverth Preciado Portfolio",
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-bg text-ink font-body antialiased min-h-screen">

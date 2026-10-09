@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Download, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { socialLinks } from "@/lib/socialLinks";
+import avatarImg from "../images/mifotoringh.jpg";
 
 const navLinks = [
   { label: "ABOUT", href: "/about", external: false },
@@ -13,8 +14,8 @@ const navLinks = [
 ];
 
 const resumeDownloads = [
-  { label: "Download PDF", href: "/resume.pdf", download: "Hussein_Abdow_Resume.pdf" },
-  { label: "Download DOCX", href: "/resume.docx", download: "Hussein_Abdow_Resume.docx" },
+  { label: "Download PDF", href: "/resume.pdf", download: "Yoverth_Preciado_Resume.pdf" },
+  { label: "Download DOCX", href: "/resume.docx", download: "Yoverth_Preciado_Resume.docx" },
 ];
 
 export default function Navbar() {
@@ -55,12 +56,12 @@ export default function Navbar() {
       <div className="flex min-w-0 items-center gap-2 sm:gap-3">
         <Link
           href="/"
-          aria-label="Hussein Abdow home"
+          aria-label="Yoverth Preciado home"
           className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accentUx focus-visible:outline-offset-4 rounded-full"
         >
           <Image
-            src="/portrait-dev.avif"
-            alt="Hussein Abdow"
+            src={avatarImg}
+            alt="Yoverth Preciado"
             width={46}
             height={46}
             priority
@@ -71,7 +72,7 @@ export default function Navbar() {
           href="/"
           className="font-display font-semibold text-[15px] tracking-[0.04em] uppercase text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accentUx focus-visible:outline-offset-4 rounded"
         >
-          HUSSEIN ABDOW
+          YOVERTH PRECIADO
         </Link>
         <span className="inline-flex max-[360px]:hidden items-center gap-2 rounded-full border border-border px-2 py-1.5 font-body text-[11px] font-medium tracking-[0.06em] text-muted whitespace-nowrap sm:px-3">
           <span className="status-dot h-[8px] w-[8px] rounded-full bg-emerald-400" aria-hidden />

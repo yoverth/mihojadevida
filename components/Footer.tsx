@@ -19,7 +19,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="font-body text-[12px] text-muted">
-          &copy; {new Date().getFullYear()} Hussein Abdow{" "}
+          &copy; {new Date().getFullYear()} Yoverth Preciado{" "}
           <span aria-hidden>&middot;</span>{" "}
           <Link
             href="/privacy"

@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full px-6 py-6 md:py-8">
-      {/* Edge vignette (behind content, subtle) */}
+      {/* Edge vignette */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -45,9 +45,10 @@ export default function Hero() {
         }}
       />
 
-      {/* Left text | Center portrait | Right text at every viewport width */}
+      {/* Grid: Lado Izquierdo | Foto Centro | Lado Derecho */}
       <div className="relative grid grid-cols-[1fr_2fr_1fr] md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-1.5 sm:gap-3 lg:gap-8 xl:gap-10 items-center justify-items-center max-w-[1700px] mx-auto">
-        {/* Left Text */}
+        
+        {/* LADO IZQUIERDO: Web & Frontend */}
         <Link
           href="/work/web-uiux"
           className="min-w-0 max-w-full text-right pr-0.5 sm:pr-1 lg:pr-2 xl:pr-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accentUx focus-visible:outline-offset-4 rounded"
@@ -63,7 +64,7 @@ export default function Hero() {
             }}
           >
             <div>
-              WEB &amp; <span className="whitespace-nowrap">UI/&nbsp;UX</span>
+              FULL STACK &amp; <span className="whitespace-nowrap">WEB</span>
             </div>
             <div>DEVELOPER</div>
           </h2>
@@ -71,13 +72,12 @@ export default function Hero() {
             className="mt-5 max-w-[300px] font-body text-[clamp(14px,1.6vw,17px)] leading-relaxed text-muted max-md:hidden"
             style={{ opacity: uxOpacity, transition: fadeTransition }}
           >
-            I work across design and development, turning product ideas into clear, usable, working experiences
+            Construyo aplicaciones web modernas, interfaces eficientes y arquitecturas limpias orientadas al rendimiento y la escalabilidad.
           </p>
         </Link>
 
-        {/* Center Portrait */}
+        {/* CENTRO: Tu Retrato / Foto */}
         <div className="relative z-10 min-w-0 w-full">
-          {/* Ambient accent glow behind portrait */}
           <div
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[130%] blur-3xl"
@@ -88,10 +88,10 @@ export default function Hero() {
           />
           <div className="relative">
             <Portrait blend={isMobile ? 50 : blend} />
-        </div>
+          </div>
         </div>
 
-        {/* Right Text + CTA */}
+        {/* LADO DERECHO: Mobile & Backend / Software */}
         <div className="min-w-0 flex flex-col items-start pl-0.5 sm:pl-1 lg:pl-2 xl:pl-4">
           <Link
             href="/work/mobile"
@@ -107,21 +107,21 @@ export default function Hero() {
                 transition: hoverTransition,
               }}
             >
-              <div>Mobile</div>
-              <div>APP Developer</div>
+              <div>Mobile &amp;</div>
+              <div>Software Eng.</div>
             </h2>
             <p
               className="mt-5 max-w-[300px] font-body text-[clamp(14px,1.6vw,17px)] leading-relaxed text-muted max-md:hidden"
               style={{ opacity: devOpacity, transition: fadeTransition }}
             >
-              I build mobile experiences that are intuitive to use, thoughtfully structured, and made to work beyond the screen.
+              Desarrollo de aplicaciones móviles y soluciones de software con foco en bases de datos, redes e integración continua.
             </p>
           </Link>
           <Link
             href="/work/all"
             className="group mt-7 hidden sm:inline-flex items-center gap-2 font-body text-[12px] font-medium tracking-[0.1em] uppercase text-ink border border-accentDev/60 rounded-full px-4 py-2 transition-colors hover:bg-accentDev hover:text-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accentDev focus-visible:outline-offset-4"
           >
-            <span>MY WORK</span>
+            <span>PROYECTOS</span>
             <span
               aria-hidden
               className="transition-transform duration-200 group-hover:translate-x-1"
@@ -131,7 +131,6 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-
     </section>
   );
 }
